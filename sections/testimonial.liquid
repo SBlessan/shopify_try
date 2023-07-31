@@ -1,0 +1,104 @@
+<div class="outer_container">
+  <h1>{{ section.settings.heading }}</h1>
+  <h3>What our clients had to say</h3>
+  
+  <div class="block_container">
+    {% for block in section.blocks %}
+      <div class="block_content">
+         <img src="{{ block.settings.block_image | img_url:'large'}}" />
+         <h2>Hiiii {{ block.settings.blocktext }}</h2>
+      </div>
+     
+    {% endfor %}
+  </div>
+  
+</div>
+
+{% style %}
+  .outer_container{
+    min-width:100%;
+    text-align:center;
+  
+  }
+
+  .block_container{
+    
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    width:100%;
+    
+    
+  }
+  
+  .block_content{
+    text-align:center;
+    width:30%;
+    margin:20px;
+    padding:10px;
+    /* border:1px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .block_content img{
+    width:45%;
+    /* max-height:200px; */
+  }
+
+
+  @media only screen and (max-width : 900px) {
+    .block_content{
+      width:40%;
+      
+    }
+  }
+
+  @media only screen and (max-width : 400px) {
+    .block_content{
+     width:100%;
+    }
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "Testimonials",
+    "settings": [
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"Main Heading",
+        "default":"Testimonials"
+      }
+    ],
+    "blocks":[
+      {
+        "type":"image",
+        "name":"Custom block",
+        "settings":[
+          {
+            "type":"image_picker",
+            "id":"block_image",
+            "label":"Enter user image"
+          },
+          {
+            "type":"text",
+            "id":"blocktext",
+            "label":"testimonial",
+            "default":"Enter User Testimonials"
+          }
+        ]
+      }
+    ],
+    "presets":[{
+      "category":"Image",
+      "name":"Testimonial section"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
