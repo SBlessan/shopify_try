@@ -63,12 +63,20 @@
             "block_image": "shopify:\/\/shop_images\/man-with-beard-avatar-character-isolated-icon-free-vector.jpg",
             "blocktext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           }
+        },
+        "730958b6-645e-4fde-8354-e885ce52eec0": {
+          "type": "image",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/icon-256x256.png",
+            "blocktext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          }
         }
       },
       "block_order": [
         "b9e06c22-ad07-4802-863e-7b961ed4a874",
         "7ea91518-fd75-413d-9de8-ab7bc6caeb35",
-        "eaa1477a-a4a0-4268-9b74-f6e41e433017"
+        "eaa1477a-a4a0-4268-9b74-f6e41e433017",
+        "730958b6-645e-4fde-8354-e885ce52eec0"
       ],
       "settings": {
         "heading": "Testimonials"
