@@ -56,11 +56,19 @@
             "block_image": "shopify:\/\/shop_images\/depositphotos_370714622-stock-illustration-businessman-icon-vector-male-avatar.webp",
             "blocktext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           }
+        },
+        "eaa1477a-a4a0-4268-9b74-f6e41e433017": {
+          "type": "image",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/man-with-beard-avatar-character-isolated-icon-free-vector.jpg",
+            "blocktext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          }
         }
       },
       "block_order": [
         "b9e06c22-ad07-4802-863e-7b961ed4a874",
-        "7ea91518-fd75-413d-9de8-ab7bc6caeb35"
+        "7ea91518-fd75-413d-9de8-ab7bc6caeb35",
+        "eaa1477a-a4a0-4268-9b74-f6e41e433017"
       ],
       "settings": {
         "heading": "Testimonials"
