@@ -49,10 +49,18 @@
             "block_image": "shopify:\/\/shop_images\/images.png",
             "blocktext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           }
+        },
+        "7ea91518-fd75-413d-9de8-ab7bc6caeb35": {
+          "type": "image",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/depositphotos_370714622-stock-illustration-businessman-icon-vector-male-avatar.webp",
+            "blocktext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          }
         }
       },
       "block_order": [
-        "b9e06c22-ad07-4802-863e-7b961ed4a874"
+        "b9e06c22-ad07-4802-863e-7b961ed4a874",
+        "7ea91518-fd75-413d-9de8-ab7bc6caeb35"
       ],
       "settings": {
         "heading": "Testimonials"
