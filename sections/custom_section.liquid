@@ -1,0 +1,54 @@
+
+<div style="text-align:center;">
+  <h1>{{ section.settings.heading }}</h1>
+
+  <img src="{{ section.settings.image | img_url: 'large' }}" >
+  <br>
+
+  <a href = "{{ section.settings.link }}">
+    <button>{{ section.settings.text }}</button>
+  <!-- {{ section.settings.link }} -->
+  </a>
+  
+</div>
+{% schema %}
+  {
+    "name": "Custom Section",
+    "settings": [{
+      "type":"text" ,
+      "id":"heading" ,
+      "label":"Main Heading",
+      "default":"My custom section"
+    },
+    {
+      "type":"text",
+      "id":"text",
+      "label":"Button Text",
+      "default":"Enter your button text"
+    },
+    {
+      "type":"image_picker",
+      "id":"image",
+      "label":"Image picker"
+      
+    },
+    {
+      "type":"url",
+      "id":"link",
+      "label":"Link url"
+    }],
+    
+    
+    "presets": [
+      {
+        "name":"Custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

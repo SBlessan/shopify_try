@@ -1,0 +1,20 @@
+<div class="products">
+  
+  {% assign myName = "Blessan" %}
+
+  {{ myName }}
+
+  <p>{{ myName}}</p> 
+  {{ page.title }} 
+  {{ product.title }}
+  
+ 
+
+  {% for product in collections.laptops %}
+
+  {{ product.title }}
+    
+
+  {% endfor %}
+  
+</div>
