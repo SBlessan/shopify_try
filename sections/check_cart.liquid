@@ -2,7 +2,8 @@
 
 <h1>Date Page Static Heading</h1>
 <p>Date is :  {{ "now" | date: "%Y-%m-%d %H:%M" }}</p>
-<p id="htmlDate">Date: <input type="text" id="datepicker" ></p>
+<p >Date: <input type="text" id="datepicker" ></p>
+<p id="htmlDate">Hello</p>
 
 {% schema %}
   {
@@ -31,7 +32,7 @@
   //   }
   // }
   let date = {{ "now" | date: "%Y-%m-%d %H:%M" }};document.getElementById("myText").value = "Johnny Bravo";
-  document.getElementById("htmlDate").value = "Johnny Bravo";
+  document.getElementById("htmlDate").innerHTML = "Johnny Bravo";
   
   $( function() {
     $( "#datepicker" ).datepicker({
