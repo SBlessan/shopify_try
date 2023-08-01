@@ -7,9 +7,52 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "b4012569-2e42-4203-b68a-2a6502c82c32": {
+      "type": "testimonial",
+      "blocks": {
+        "ee0fbced-a14d-4ad9-bd0c-dddb32ae0396": {
+          "type": "image",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/images.png",
+            "blocktext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          }
+        },
+        "5c48c94e-28fa-40d8-a619-a8b934d77a81": {
+          "type": "image",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/depositphotos_370714622-stock-illustration-businessman-icon-vector-male-avatar.webp",
+            "blocktext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          }
+        },
+        "4a9c60ed-8eef-4b9b-a273-3cdb4c7c7dcc": {
+          "type": "image",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/man-with-beard-avatar-character-isolated-icon-free-vector.jpg",
+            "blocktext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          }
+        },
+        "f89eeee1-146a-4f30-b87d-09c8982cbec4": {
+          "type": "image",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/icon-256x256_68c46c19-b33d-4105-801d-3c5c8cf64baf.png",
+            "blocktext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          }
+        }
+      },
+      "block_order": [
+        "ee0fbced-a14d-4ad9-bd0c-dddb32ae0396",
+        "5c48c94e-28fa-40d8-a619-a8b934d77a81",
+        "4a9c60ed-8eef-4b9b-a273-3cdb4c7c7dcc",
+        "f89eeee1-146a-4f30-b87d-09c8982cbec4"
+      ],
+      "settings": {
+        "heading": "Testimonials"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "b4012569-2e42-4203-b68a-2a6502c82c32"
   ]
 }

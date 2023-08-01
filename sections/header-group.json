@@ -42,6 +42,7 @@
     },
     "99818148-6762-4282-ab62-7c4087bf1b08": {
       "type": "testimonial",
+      "disabled": true,
       "blocks": {
         "b9e06c22-ad07-4802-863e-7b961ed4a874": {
           "type": "image",
