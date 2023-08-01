@@ -1,3 +1,5 @@
+<p>Date: <input type="text" id="datepicker"></p>
+
 {% schema %}
   {
     "name": "Section name",
@@ -8,9 +10,15 @@
         "label":"Heading",
         "default":"Heading"
       }
-    ]
+    ],
+    "presets":[{
+      "name":"Date Custom"
+    }]
+    
   }
 {% endschema %}
+
+
 
 {% stylesheet %}
 {% endstylesheet %}
