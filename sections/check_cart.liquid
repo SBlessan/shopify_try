@@ -24,6 +24,11 @@
 {% endschema %}
 
 <script>
+  window.onload = function() {
+    if(window.jQuery){
+      let $ = window.jQuery
+    }
+  }
   $( function() {
     $( "#datepicker" ).datepicker({
         minDate: +1,
