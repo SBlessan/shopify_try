@@ -3,12 +3,12 @@
 
 
 <div>
-<p>Please select your Country : </p>
-<select name="country_name" id="country" onchange="clicked()" placeholder="choose">
-  <option value="Choose Option">Choose Option</option> 
-  <option value="Dubai">Dubai</option>
-  <option value="Abu Dhabi">Abu Dhabi</option>
-  <option value="Sharjah">Sharjah</option>
+<p>Please select your Region : </p>
+<select class="setting" id="country" onchange="clicked()" placeholder="choose" name="attributes[country]">
+  <option class="setting" value="Choose Option">Choose Option</option> 
+  <option class="setting" value="Dubai">Dubai</option>
+  <option class="setting" value="Abu Dhabi">Abu Dhabi</option>
+  <option class="setting" value="Sharjah">Sharjah</option>
   
 </select>
 </div>
@@ -18,83 +18,118 @@
 <div style="width:300px; clear:both;">
   <p>
     <label for="date">Pick a delivery date:</label>
-    <input id="date" class="" type="text" name="attributes[date]" value="{{ cart.attributes.date }}" onchange = "getDate()" />
-   
-    
-    <span style="display:block" class="instructions"> We do not deliver during the week-end.</span>
+    <input id="date" class="" type="text" name="attributes[date]" value="{{ cart.attributes.date }}"  />
   </p>
 </div>
 
 
 <script>
-  
-
-  
-    
-
 
 
   function clicked(){
             var e = document.getElementById('country')
             var value = e.value
             console.log(value,"this is the country")
+            setCookie("Country",value,1)
+            document.getElementById("date").value = '';
+            
             var d = new Date();
             var m = d.getMinutes();
             var h = d.getHours();
            
-            console.log("Hour" , m)
+         
 
             let c = 0;
-
-            if(h<13 && m<30) {
+            if( h<13 || (h===13 && m<30)) {
                 c = 1;
             }
-
-             if(value == 'Dubai' && c===1) {
-               console.log("Working" , value)
-               
-               
+             if(value === 'Dubai' && c === 1) { 
                 $(function first() {
+                $( "#date" ).datepicker( "destroy" );
                 $("#date").datepicker({
-                minDate: +0,
-                maxDate: '+2M'
+                minDate: "+0d",
+                maxDate: '+2M',
+                onSelect:function(date , datepicker) {
+                 
+                  setCookie("Date",date,1)
+                }
                 });
-                setCookie("country",value,1)
+               
                 });
             }
-            else {
+            else if(value === 'Dubai' || value === 'Abu Dhabi' || value === 'Sharjah') {
                 $(function second() {
+                $( "#date" ).datepicker( "destroy" );
                 $("#date").datepicker({
-                minDate: +1,
-                maxDate: '+2M'
+                minDate: "+1d",
+                maxDate: '+2M',
+                onSelect:function(date , datepicker) {
+                  
+                  setCookie("Date",date,1)
+                }
                 });
-                console.log(value)
                 setCookie("country",value,1)
-                });
-                    
+                });       
             }   
+            else {
+              alert("Please select a country")
+            }
          }
-
-   
-
-    function getDate() {
-    var f = document.getElementById('date').value
-    console.log("Date is :" ,f)
-    }
 
     function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+
   }
 
-  setCookie()
+
+  window.onload = function() {
+      
+      let x = decodeURIComponent(document.cookie);
+      let decoded_country = x.split("; ").find((row) => row.startsWith("Country"))?.split("=")[1];
+      let decoded_date = x.split("; ").find((row) => row.startsWith("Date"))?.split("=")[1];
+      
+      console.log("Cookie Country" , decoded_country)
+      console.log("Cookie Date" , decoded_date)
+      
+     
+      let put = document.getElementById('country')
+      put.value = decoded_country
+     
+
+      let set_date = document.getElementById('date')
+      set_date.value = decoded_date
+
+      console.info( "This page is reloaded" );
+      
+    }
+
+  
 </script>
 
-
-
 <style>
+
+  #date{
+    height: 30px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 18px;
+    font-family: system-ui;
+  }
+
+  #country {
+    height: 30px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 18px;
+    font-family: system-ui;
+  }
 
 
 </style>
