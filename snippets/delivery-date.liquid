@@ -3,8 +3,8 @@
 
 
 <div>
-<p>Please select your Country : </p>
-<select name="country_name" id="country" onchange="clicked()" placeholder="choose">
+<label for="country">Please select your Country : </label>
+<select  id="country" onchange="clicked()" placeholder="choose" name="attributes[country]">
   <option value="Choose Option">Choose Option</option> 
   <option value="Dubai">Dubai</option>
   <option value="Abu Dhabi">Abu Dhabi</option>
@@ -18,7 +18,7 @@
 <div style="width:300px; clear:both;">
   <p>
     <label for="date">Pick a delivery date:</label>
-    <input id="date" class="" type="text" name="cart.attributes[date]" value="{{ cart.attributes.date }}" onchange = "getDate()" />
+    <input id="date" class="" type="text" name="attributes[date]" value="{{ cart.attributes.date }}" onchange = "getDate()" />
    
     
     <span style="display:block" class="instructions"> We do not deliver during the week-end.</span>
