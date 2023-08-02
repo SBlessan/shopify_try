@@ -4,8 +4,8 @@
 
 <div>
 <p>Please select your Region : </p>
-<select class="setting" id="country" onchange="clicked()" placeholder="choose" name="attributes[country]">
-  <option class="setting" value="Choose Option">Choose Option</option> 
+<select class="setting" id="country" onchange="clicked()" placeholder="choose" name="attributes[Country]" required>
+  
   <option class="setting" value="Dubai">Dubai</option>
   <option class="setting" value="Abu Dhabi">Abu Dhabi</option>
   <option class="setting" value="Sharjah">Sharjah</option>
@@ -18,7 +18,7 @@
 <div style="width:300px; clear:both;">
   <p>
     <label for="date">Pick a delivery date:</label>
-    <input id="date" class="" type="text" name="attributes[date]" value="{{ cart.attributes.date }}"  />
+    <input id="date" class="" type="text" name="attributes[Date]" value="{{ cart.attributes.date }}"  required/>
   </p>
 </div>
 
@@ -86,10 +86,12 @@
 
 
   window.onload = function() {
+      clicked()
       
       let x = decodeURIComponent(document.cookie);
       let decoded_country = x.split("; ").find((row) => row.startsWith("Country"))?.split("=")[1];
       let decoded_date = x.split("; ").find((row) => row.startsWith("Date"))?.split("=")[1];
+      $( "#date" ).datepicker( "destroy" );
       
       console.log("Cookie Country" , decoded_country)
       console.log("Cookie Date" , decoded_date)
